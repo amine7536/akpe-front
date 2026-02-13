@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/amine7536/front
+  tag: latest
+  pullPolicy: Always
+
+service:
+  port: 3000
+
+ingress:
+  enabled: true
+  host: front.127.0.0.1.nip.io
+
+env:
+  BACKEND_1_URL: "http://backend-1.main.svc.cluster.local:8080"
+  BACKEND_2_URL: "http://backend-2.main.svc.cluster.local:8080"
