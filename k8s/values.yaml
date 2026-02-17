@@ -13,5 +13,5 @@ ingress:
   host: front.127.0.0.1.nip.io
 
 env:
-  BACKEND_1_URL: "http://backend-1.main.svc.cluster.local:8080"
-  BACKEND_2_URL: "http://backend-2.main.svc.cluster.local:8080"
+  BACKEND_1_URL: "http://backend-1:8080"
+  BACKEND_2_URL: "http://backend-2:8080"
