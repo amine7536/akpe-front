@@ -1,2 +1,4 @@
 node_modules/
 .next/
+k8s/Chart.lock
+k8s/charts/

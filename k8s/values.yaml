@@ -1,26 +1,27 @@
-replicaCount: 1
+app:
+  replicaCount: 1
 
-image:
-  repository: ghcr.io/amine7536/akpe-front
-  tag: ""
-  pullPolicy: IfNotPresent
+  image:
+    repository: ghcr.io/amine7536/akpe-front
+    tag: ""
+    pullPolicy: IfNotPresent
 
-service:
-  port: 3000
+  service:
+    port: 3000
 
-ingress:
-  enabled: true
-  host: front.127.0.0.1.nip.io
+  ingress:
+    enabled: true
+    host: front.127.0.0.1.nip.io
 
-healthCheck:
-  path: /
-  livenessProbe:
-    initialDelaySeconds: 10
-    periodSeconds: 10
-  readinessProbe:
-    initialDelaySeconds: 5
-    periodSeconds: 5
+  healthCheck:
+    path: /
+    livenessProbe:
+      initialDelaySeconds: 10
+      periodSeconds: 10
+    readinessProbe:
+      initialDelaySeconds: 5
+      periodSeconds: 5
 
-env:
-  BACKEND_1_URL: "http://backend-1:8080"
-  BACKEND_2_URL: "http://backend-2:8080"
+  env:
+    BACKEND_1_URL: "http://backend-1:8080"
+    BACKEND_2_URL: "http://backend-2:8080"
